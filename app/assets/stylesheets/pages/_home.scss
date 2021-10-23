@@ -1,11 +1,30 @@
 // Specific CSS for your home-page
 body {
-    background-color: #914e40;
+    background-image: linear-gradient(to bottom, #ca816f 0%, rgb(255, 255, 255));
     overflow-x: hidden
 }
 
-.bg-white {
-    background-color: #fff
+//container
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 0;
+  padding-left: 20px;
+}
+
+//logo
+
+
+
+//navbar
+
+#logo {
+  width: 60px;
+  border-radius: 50%;
 }
 
 .navbar-brand {

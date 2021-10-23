@@ -1,0 +1,2 @@
+class Eletro < ApplicationRecord
+end
