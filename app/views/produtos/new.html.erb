@@ -1,0 +1,11 @@
+<div class="form">
+  <%= form_for @produto do |f| %>
+    <h1><%= f.label :nome %></h1>
+    <h1><%= f.text_field :nome %></h1>
+    <h1><%= f.label :tipo %></h1>
+    <h1><%= f.text_field :tipo %></h1>
+    <h1><%= f.label :valor %></h1>
+    <h1><%= f.text_field :valor %></h1>
+    <h1><%= f.submit %></h1>
+  <% end %>
+</div>

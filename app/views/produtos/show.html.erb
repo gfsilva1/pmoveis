@@ -1,0 +1,8 @@
+<h1><%= @produto.nome %></h1>
+<h1><%= @produto.tipo %></h1>
+<h1><%= @produto.valor %></h1>
+
+<%= link_to "Delete ",
+            produto_path(@produto),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
