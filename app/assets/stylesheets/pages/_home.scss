@@ -15,8 +15,7 @@
   position: absolute;
 
   background-size: 2700px 1500px;
-  background-image: url("/assets/logo.PNG");
-
+  background-image: image-url("logo.PNG");
   height: 30vh;
   width: 15vw;
 
@@ -31,7 +30,7 @@
 }
 .d2 {
   position: absolute;
-  background-image: url(logo.PNG);
+  background-image: image-url("logo.PNG");
   background-size: 2700px 1500px;
 
   height: 50vh;
@@ -48,7 +47,7 @@
 }
 .d3 {
   position: absolute;
-  background-image: url(logo.PNG);
+  background-image: image-url("logo.PNG");
   background-size: cover;
   overflow: hidden;
 
