@@ -1,0 +1,16 @@
+current directory: /home/gfsilva/code/gfsilva1/projects/pontualmoveis/pontualmoveis/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+/home/gfsilva/.rvm/rubies/ruby-2.7.3/bin/ruby -I /home/gfsilva/.rvm/rubies/ruby-2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20211108-19599-xv9ghm.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /home/gfsilva/code/gfsilva1/projects/pontualmoveis/pontualmoveis/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+make DESTDIR\= clean
+
+current directory: /home/gfsilva/code/gfsilva1/projects/pontualmoveis/pontualmoveis/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+make DESTDIR\=
+compiling unf.cc
+linking shared-object unf_ext.so
+
+current directory: /home/gfsilva/code/gfsilva1/projects/pontualmoveis/pontualmoveis/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8/ext/unf_ext
+make DESTDIR\= install
+/usr/bin/install -m 0755 unf_ext.so ./.gem.20211108-19599-1vy6foc
