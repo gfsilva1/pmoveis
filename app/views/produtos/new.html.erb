@@ -1,11 +1,35 @@
 <div class="form">
-  <%= form_for @produto do |f| %>
-    <h1><%= f.label :nome %></h1>
-    <h1><%= f.text_field :nome %></h1>
-    <h1><%= f.label :tipo %></h1>
-    <h1><%= f.text_field :tipo %></h1>
-    <h1><%= f.label :valor %></h1>
-    <h1><%= f.text_field :valor %></h1>
-    <h1><%= f.submit %></h1>
-  <% end %>
+              <%= simple_form_for @produto do |f| %>
+
+                <h1><%=f.input :nome,
+                            required: true,
+                            autofocus: true,
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "Nome" %>
+                <i class='input-icon uil uil-at'></i></h1>
+
+
+                <h1><%=f.input :tipo,
+                            required: false,
+                            autofocus: true,
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "Tipo" %>
+                <i class='input-icon uil uil-at'></i></h1>
+
+                <h1><%=f.input :valor,
+                            required: true,
+                            autofocus: true,
+                            min: '1',
+                            class: 'form-style border border-1 border-white rounded',
+                            placeholder: "Valor" %>
+                <i class='input-icon uil uil-at'></i></h1>
+
+
+                <h1><%= f.input :photo,
+                            as: :file,
+                            class: 'btn-sign mb-1 mt-3 rounded-3' %></h1>
+
+                <h1><%= f.submit "Criar produto", class: 'submit' %></h1>
+
+              <% end %>
 </div>

@@ -1,8 +1,17 @@
-<h1><%= @produto.nome %></h1>
-<h1><%= @produto.tipo %></h1>
-<h1><%= @produto.valor %></h1>
-
-<%= link_to "Delete ",
-            produto_path(@produto),
-            method: :delete,
-            data: { confirm: "Are you sure?" } %>
+<div class="centralizar">
+  <div class="card-produto">
+    <%= cl_image_tag @produto.photo.key, class:"card-product img", height: 300, width: 413, crop: :fill %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= @produto.nome %></h2>
+          <p><%= @produto.tipo %><p>
+        </div>
+        <h2 class="card-trip-pricing"><%= @produto.valor %></h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" alt="">
+      </div>
+      <%= link_to "Delete ",
+                  produto_path(@produto),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
+  </div>
+</div>

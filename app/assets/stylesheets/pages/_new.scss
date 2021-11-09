@@ -1,10 +1,21 @@
 
 .form {
-  width: 500px;
-  margin: 0 auto;
-
+  width:50vw;
+  height: 100vh;
+  margin-left: 280px;
+  border-radius:10%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
   h1 {
     color: white;
+    font-size: 20px;
+}
+
+.submit {
+  color:whitesmoke;
 }

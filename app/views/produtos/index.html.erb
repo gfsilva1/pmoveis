@@ -1,6 +1,25 @@
 
+<div class="lista">
+  <h1>Lista de produtos</h1>
+</div>
+
 <div>
   <% @produtos.each do |produto| %>
-    <%= @produto.nome %>
+      <div class="card-product">
+          <% if produto.photo.attached? %>
+            <%= cl_image_tag produto.photo.key, crop: :fill,class:"img_preview" %>
+          <% else%>
+            <h1></h1>
+          <%end%>
+        <div class="card-product-infos">
+          <h2><%= produto.nome %></h2>
+          <p>Descrição:<%= produto.tipo %></p>
+          <p>R$<%= produto.valor %></p>
+        </div>
+        <a href="">Comprar</a>
+      </div>
   <% end %>
+</div>
+<div class="btn">
+  <button style="color:white"><%= link_to "Criar produto",  new_produto_path %></button>
 </div>

@@ -23,7 +23,7 @@ class ProdutosController < ApplicationController
   private
 
   def produto_params
-    params.require(:produto).permit(:nome, :valor, :tipo)
+    params.require(:produto).permit(:nome, :valor, :tipo, :photo)
   end
 
   def destroy
