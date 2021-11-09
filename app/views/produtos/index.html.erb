@@ -1,6 +1,6 @@
 
 <div>
   <% @produtos.each do |produto| %>
-    <%= @produto.nome %>
+    <%= render :partial => 'produtos', :locals => {:produto => produto} %>
   <% end %>
 </div>
