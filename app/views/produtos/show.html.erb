@@ -1,17 +1,20 @@
 <div class="centralizar">
   <div class="card-produto">
     <%= cl_image_tag @produto.photo.key, class:"card-product img", height: 300, width: 413, crop: :fill %>
-      <div class="card-trip-infos">
+      <div class="card-product-infos">
         <div>
           <h2><%= @produto.nome %></h2>
-          <p><%= @produto.tipo %><p>
+            <p><%= @produto.tipo %><p>
         </div>
-        <h2 class="card-trip-pricing"><%= @produto.valor %></h2>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" alt="">
+        <%= @produto.valor %>
+        <img src="https://scontent.fcgh40-1.fna.fbcdn.net/v/t39.30808-6/246362410_4201804193263590_3014684204083413757_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF6xMP0GwoTMRr4d4BvzHxkDb5A_ZAKBe4NvkD9kAoF7n5MGhpwsEe2rVK0DSwnTDQ&_nc_ohc=enN22lQwIv8AX9cUHM6&_nc_zt=23&_nc_ht=scontent.fcgh40-1.fna&oh=b53814d2d068a76b3f3be810c0acd545&oe=619BE8B7" class="card-trip-user avatar-bordered" alt="">
       </div>
       <%= link_to "Delete ",
                   produto_path(@produto),
                   method: :delete,
                   data: { confirm: "Are you sure?" } %>
+      <div class="btn">
+        <button style="color:white"><%= link_to "Aprovar e ver lista",  produtos_path %></button>
+       </div>
   </div>
 </div>

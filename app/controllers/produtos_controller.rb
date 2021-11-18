@@ -1,5 +1,5 @@
 class ProdutosController < ApplicationController
-  skip_before_action :authenticate_user!, :only => [:index, :show, :new, :create]
+  skip_before_action :authenticate_user!, :only => [:index, :show, :new, :create, :destroy]
   def index
     @produtos=Produto.all
   end
@@ -20,17 +20,19 @@ class ProdutosController < ApplicationController
     redirect_to produto_path(@produto)
   end
 
+  def destroy
+    @produto = Produto.find(params[:id])
+    @produto.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to produtos_path
+  end
+
   private
 
   def produto_params
     params.require(:produto).permit(:nome, :valor, :tipo, :photo)
   end
 
-  def destroy
-    @restaurant = Restaurant.find(params[:id])
-    @restaurant.destroy
 
-    # no need for app/views/restaurants/destroy.html.erb
-    redirect_to restaurants_path
-  end
 end
