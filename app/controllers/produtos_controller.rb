@@ -1,7 +1,11 @@
 class ProdutosController < ApplicationController
   skip_before_action :authenticate_user!, :only => [:index, :show, :new, :create, :destroy]
   def index
-    @produtos=Produto.all
+    if params[:query].present?
+      @produtos = Produto.search_product(params[:query])
+    else
+      @produtos = Produto.all
+    end
   end
 
   def show
