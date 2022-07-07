@@ -1,7 +1,14 @@
+.central {
+  margin-top: 200px;
+  width: 500px;
+  margin-bottom: 200px;
+}
+
 .card-produto {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 200px;
 }
 
 .card-produto > img {
